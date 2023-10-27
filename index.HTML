@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player with Playlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        audio {
+            width: 300px;
+            margin: 20px auto;
+            display: block;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff751a;
+            color: #33ffff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffff33;
+        }
+    </style>
+</head>
+<body>
+    <h1>YOUR NAME MUSOC</h1>
+    <audio id="audioPlayer" controls>
+        <source src="(01)Dream Lantern.flac" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <ul>
+        <li><button onclick="loadSong('(01)Dream Lantern.flac')">Dream Lantern</button></li>
+        <li><button onclick="loadSong('(02)School Road.flac')">School Road</button></li>
+        <li><button onclick="loadSong('(03)Itomori high school.flac')">Itomori high school</button></li>
+        <li><button onclick="loadSong('(04)First view of tokyo.flac')">First view of tokyo</button></li>
+        <li><button onclick="loadSong('(05)Cafe at last.flac')">Cafe at last</button></li>
+        <li><button onclick="loadSong('(06)Theme of Ms. Okudera.flac')">Theme of Ms. Okudera</button></li>
+        <li><button onclick="loadSong('(07)Unusual changes of two.flac')">Unusual changes of two</button></li>
+        <li><button onclick="loadSong('(08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+        <li><button onclick="loadSong('(09)Goshintai.flac')">(09)Goshintai.flac</button></li>
+        <li><button onclick="loadSong('(24)sparkle(movie ver.).flac')">sparkle(movie ver.)</button></li>
+        <li><button onclick="loadSong('((08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+        <li><button onclick="loadSong('((08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+        <li><button onclick="loadSong('((08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+        <li><button onclick="loadSong('((08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+        <li><button onclick="loadSong('((08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+        <li><button onclick="loadSong('((08)Zenzenzense (movie ver.).flac')">Zenzenzense (movie ver.)</button></li>
+    </ul>
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        function loadSong(songFile) {
+            audioPlayer.src = songFile;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
