@@ -1,14 +1,25 @@
+/* Common styles for both mobile and desktop */
 body {
     background-image: url('docs/assets/yourname.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
-}
-
-h1, p {
     text-align: center;
     color: #fff;
+}
+
+.container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#musicPlayer {
+    width: 100%;
 }
 
 button {
@@ -19,4 +30,22 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+}
+
+#currentlyPlaying {
+    margin-top: 10px;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+}
+
+/* Media query for larger desktop screens */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
 }
